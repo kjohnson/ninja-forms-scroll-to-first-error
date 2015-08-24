@@ -22,8 +22,10 @@ function ninja_forms_scroll_js() {
 
         if ( is_array( $all_errors ) ) {
 
+            $all_errors = array_values($all_errors);
+
             // Get First Error
-            $first_error = array_values($all_errors)[0];
+            $first_error = $all_errors[0];
 
             // Build Form ID from ninja-forms naming convention
             $field_id = "ninja_forms_field_" . $first_error['location'];
